@@ -1,6 +1,9 @@
-module fp(output reg [7:0] DATA_R, DATA_G, DATA_B, lfsr, output reg [3:0] A_count, output reg [1:0] cc,
-output reg a, b, c, d, e, f, g,
+module fp(output reg [7:0] DATA_R, DATA_G, DATA_B, output reg [3:0] A_count, output reg a, b, c, d, e, f, g,
 input [3:0] punch, input CLK, Clear);
+
+	reg [7:0] lfsr;
+	reg [1:0] cc;
+	
 	divfreq F0(CLK, CLK_div);	//除頻器
 	
 	//玩家出拳
