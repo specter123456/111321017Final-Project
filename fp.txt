@@ -1,4 +1,4 @@
-module fp(output reg [7:0] DATA_R, DATA_G, DATA_B, output reg [3:0] A_count, output reg a, b, c, d, e, f, g, COMM,
+module fp(output reg [7:0] DATA_R, DATA_G, DATA_B, output reg [3:0] A_count, output reg a, b, c, d, e, f, g,
 input [3:0] punch_1, punch_2, input CLK, Clear);
 	divfreq F0(CLK, CLK_div);	//除頻器
 	
@@ -29,12 +29,7 @@ input [3:0] punch_1, punch_2, input CLK, Clear);
 		
 	//8*8 matrix enable
 	always@(posedge CLK_div, posedge Clear)
-		if(Clear) 
-			begin
-				A_count <= 4'b0000;
-				COMM <= 1'b1;
-			end
-			
+		if(Clear) A_count <= 4'b0000;
 		else A_count <= A_count + 1'b1;
 		
 endmodule
