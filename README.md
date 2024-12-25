@@ -7,4 +7,4 @@
 
 ### 程式模組說明：
 * module fp(output reg [7:0] DATA_R, DATA_G, DATA_B//8*8RGB, output reg [3:0] A_count//8*8enable, output reg a, b, c, d, e, f, g//七段顯示器,
-input [3:0] punch_1//玩家1, punch_2//玩家2, input CLK//時脈);
+input [3:0] punch_1//玩家1, punch_2//玩家2, input CLK//時脈, Clear);
